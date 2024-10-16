@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #e0e0e0;
+}
+
+.account-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.account, .logout {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.logout {
+    margin-top: 20px;
+    color: #ff4b5c;
+}
+
+.logout:hover, .account:hover {
+    color: #f2f2f2;
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+

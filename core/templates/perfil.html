@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Administrador</title>
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="logo">CamControl</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Ajustes</a></li>
+                <li><a href="main">Atras</a></li>
+                <li><a href="/">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h1>Perfil administrador</h1>
+        <div class="profile-container">
+            <div class="profile-header">
+                <h2>Perfil</h2>
+            </div>
+
+            <div class="profile-info">
+                <div class="profile-picture">
+                    <img src="{% static 'img/mau.png' %}" alt="Imagen de perfil">
+                </div>
+                <div class="personal-info">
+                    <h3>Nombre:</h3>
+                    <p>{{ user.name }}</p>
+                    <h3>Rol:</h3>
+                    <p>Administrador</p>
+                    <h3>Edad:</h3>
+                    <p>{{ user.age }} Años</p>
+                    <h3>Cargo:</h3>
+                    <p>{{ user.position }}</p>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item">
+                    <h3>Objetivo de monitoreo:</h3>
+                    <p>{{ user.monitoring_goal }}</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Objetivos de seguridad:</h3>
+                    <p>{{ user.security_goal }}</p>
+                </div>
+            </div>
+
+            <div class="system-info">
+                <h3>Sistemas CamControl</h3>
+                <ul>
+                    <li>Aplicación de control</li>
+                    <li>Tabletas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

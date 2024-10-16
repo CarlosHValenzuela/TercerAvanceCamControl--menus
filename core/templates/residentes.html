@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link type='text/css' href='{% static "css/main-css.css" %}' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-title">
+                <img src='{% static "img/logo-camcontrol.jpg" %}' alt="Logo" class="logo">
+                <h1 class="title">CamControl</h1>
+                <h2 class="title">{{ request.resolver_match.url_name }}</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Panel de Control</a></li>
+                    <li><a href="#">Informes</a></li>
+                    <li><a href="residentes">Residentes</a></li>
+                    <li><a href="#">Personas</a></li>
+                    <li><a href="reconocedor">Captura en Vivo</a></li>
+                </ul>
+            </nav>
+            <div class="account-options">
+                <a href="perfil" class="account">Tu Cuenta</a>
+                <a href="/" class="logout">Cerrar Sesión</a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h2>Gestion de residentes</h2>
+            <!-- Aquí puedes agregar el contenido principal dinámico -->
+        </main>
+    </div>
+</body>
+</html>
